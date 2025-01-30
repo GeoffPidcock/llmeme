@@ -124,13 +124,22 @@ def log_event(
     
     # Use default db_params if none provided
     if db_params is None:
-        db_params = {
-            "dbname": "postgres",
-            "user": os.getenv("DB_USER"),
-            "password": os.getenv("DB_PASSWORD"),
-            "host": os.getenv("DB_HOST"),
-            "port": os.getenv("DB_PORT")
-        }
+        # Try to use socket connection first
+        if os.path.exists('/var/run/postgresql/.s.PGSQL.5432'):
+            db_params = {
+                "dbname": "postgres",
+                "user": os.getenv("DB_USER"),
+                "password": os.getenv("DB_PASSWORD")
+            }
+        else:
+            # Fall back to TCP connection
+            db_params = {
+                "dbname": "postgres",
+                "user": os.getenv("DB_USER"),
+                "password": os.getenv("DB_PASSWORD"),
+                "host": os.getenv("DB_HOST", "localhost"),
+                "port": os.getenv("DB_PORT", "5432")
+            }
     
     # Add default metadata
     full_metadata = {
