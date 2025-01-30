@@ -76,7 +76,8 @@ def generate_meme(prompt: str, state: dict = None) -> tuple:
         
         meme_data = generate_meme_completion(
             prompt=full_prompt,
-            model=model
+            model=model,
+            max_attempts=10
         )
         
         # Add imgflip credentials

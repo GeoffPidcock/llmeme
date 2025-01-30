@@ -49,36 +49,70 @@ def generate_meme_completion(
     max_attempts: int = 5,
     config: Optional[Dict[str, Any]] = None
 ) -> Dict[str, Any]:
-    """Generates a meme completion using the model."""
-    print("\n[MEME GENERATION] Starting meme generation")
-    
+    """
+    Generates a meme completion and validates JSON output, with multiple attempts.
+    Includes JSON formatting instructions in prompt.
+    """
     if config is None:
         config = {
             'max_output_tokens': 1000,
             'temperature': 0.1,
         }
     
+    # Add JSON formatting instructions to prompt
+    json_prompt = f"""
+    {prompt}
+
+    IMPORTANT: Respond with ONLY a valid JSON object containing template_id, text0, and text1.
+    Example format:
+    {{
+        "template_id": "123456",
+        "text0": "top text",
+        "text1": "bottom text"
+    }}
+    """
+    
     last_error = None
     for attempt in range(max_attempts):
-        print(f"[MEME GENERATION] Attempt {attempt + 1}/{max_attempts}")
         try:
+            # Generate completion
             response = model.generate_content(
-                prompt,
+                json_prompt,
                 generation_config=genai.GenerationConfig(**config)
             )
             
             if not response.text:
-                raise RuntimeError("Model returned empty response")
-                
-            meme_data = json.loads(response.text)
-            print("[MEME GENERATION] Successfully generated and parsed meme data")
+                last_error = RuntimeError("Model returned empty response")
+                continue
+            
+            # Clean the response text
+            cleaned_response = (response.text
+                              .strip()  # Remove leading/trailing whitespace
+                              .replace('\n', '')  # Remove newlines
+                              .replace('```json', '')  # Remove markdown code blocks
+                              .replace('```', '')
+                              .strip())  # Remove any remaining whitespace
+            
+            # If response starts with triple quotes, find the JSON within
+            if cleaned_response.startswith('"""') or cleaned_response.startswith("'''"):
+                cleaned_response = cleaned_response[3:-3]
+            
+            # Parse JSON response
+            meme_data = json.loads(cleaned_response)
+            
+            # Validate required keys
+            required_keys = ['template_id', 'text0', 'text1']
+            if not all(key in meme_data for key in required_keys):
+                missing_keys = [key for key in required_keys if key not in meme_data]
+                raise ValueError(f"Missing required keys: {missing_keys}")
+            
             return meme_data
             
-        except (json.JSONDecodeError, RuntimeError) as e:
-            last_error = f"Attempt {attempt + 1} failed: {str(e)}"
-            print(f"[MEME GENERATION] {last_error}")
-            continue
+        except (json.JSONDecodeError, ValueError) as e:
+            last_error = RuntimeError(f"Invalid JSON in model response (attempt {attempt + 1}/{max_attempts}): {e}")
+            continue  # Try again
             
+    # If we get here, all attempts failed
     raise RuntimeError(f"Failed after {max_attempts} attempts. Last error: {last_error}")
 
 def create_imgflip_meme(
@@ -137,8 +171,8 @@ def log_event(
                 "dbname": "postgres",
                 "user": os.getenv("DB_USER"),
                 "password": os.getenv("DB_PASSWORD"),
-                "host": os.getenv("DB_HOST", "localhost"),
-                "port": os.getenv("DB_PORT", "5432")
+                "host": os.getenv("DB_HOST"),
+                "port": os.getenv("DB_PORT")
             }
     
     # Add default metadata
