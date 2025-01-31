@@ -6,42 +6,67 @@ from psycopg2.extras import Json
 from datetime import datetime
 import requests
 import google.generativeai as genai
+import random
+
 
 def construct_meme_prompt(
     user_input: str,
     meme_context: list,
     previous_attempts: list = None
 ) -> str:
-    """Constructs a prompt for the meme generation model."""
+    """
+    Constructs a prompt for the meme generation model with randomized meme context.
+    """
+    if not user_input.strip():
+        raise ValueError("user_input must be non-empty")
+    if not meme_context:
+        raise ValueError("meme_context must be non-empty")
+    
     print(f"\n[PROMPT CONSTRUCTION] Starting with user input: {user_input}")
+
+    # Shuffle the meme context
+    shuffled_context = list(meme_context)  # Create a copy
+    random.shuffle(shuffled_context)
     
-    # Input validation
-    if not isinstance(user_input, str) or not user_input.strip():
-        raise ValueError("user_input must be a non-empty string")
-    if not isinstance(meme_context, list) or not meme_context:
-        raise ValueError("meme_context must be a non-empty list")
+    sections = []
     
-    # Construct the prompt
-    prompt_parts = []
+    # Add failed attempts if they exist
+    if previous_attempts:
+        sections.append("PREVIOUS ATTEMPTS (TRY A DIFFERENT TEMPLATE):")
+        sections.extend(str(attempt) for attempt in previous_attempts)
     
-    # Add previous attempts if they exist
-    if previous_attempts and len(previous_attempts) > 0:
-        print(f"[PROMPT CONSTRUCTION] Including {len(previous_attempts)} previous attempts")
-        declined_memes = "DECLINED MEMES (MAKE SOMETHING ELSE USING USER INPUT AND CONTEXT)\n===="
-        for attempt in previous_attempts:
-            declined_memes += f"\n{attempt}\n"
-        prompt_parts.append(declined_memes)
-    
-    # Add user input and context
-    prompt_parts.extend([
-        f"USER INPUT:\n{user_input.strip()}",
-        "====",
-        f"AVAILABLE CONTEXT:\n{str(meme_context)}"
+    sections.extend([
+        f"USER INPUT: {user_input.strip()}",
+        f"AVAILABLE CONTEXT: {str(shuffled_context)}"
     ])
-    
-    final_prompt = "\n".join(prompt_parts)
+
     print("[PROMPT CONSTRUCTION] Prompt constructed successfully")
-    return final_prompt
+    
+    return "\n\n".join(sections)
+
+def clean_response(response: str) -> str:
+    """
+    Cleans AI response to ensure valid JSON formatting.
+    Handles edge cases with 'json' prefix and smart quote issues.
+    """
+    # Remove 'json' prefix and newlines at start
+    cleaned = response.lstrip('json\n')
+    
+    # Remove markdown code blocks and backticks
+    cleaned = cleaned.strip('`').replace('```json', '').replace('```', '')
+    
+    # Replace various quote types with standard double quotes
+    cleaned = cleaned.replace('"', '"').replace('"', '"').replace("'", '"')
+    
+    # Handle escaped quotes inside text strings
+    cleaned = cleaned.replace('\\"', '"')
+
+    
+    # Remove any trailing commas before closing braces
+    cleaned = cleaned.replace(',}', '}')
+    cleaned = cleaned.replace(',]', ']')
+    
+    return cleaned.strip()
 
 def generate_meme_completion(
     prompt: str,
@@ -59,25 +84,26 @@ def generate_meme_completion(
             'temperature': 0.1,
         }
     
-    # Add JSON formatting instructions to prompt
-    json_prompt = f"""
-    {prompt}
+    # # debug - I don't think this should be here, this belongs in prompt construction
+    # # Add JSON formatting instructions to prompt
+    # json_prompt = f"""
+    # {prompt}
 
-    IMPORTANT: Respond with ONLY a valid JSON object containing template_id, text0, and text1.
-    Example format:
-    {{
-        "template_id": "123456",
-        "text0": "top text",
-        "text1": "bottom text"
-    }}
-    """
+    # IMPORTANT: Respond with ONLY a valid JSON object containing template_id, text0, and text1.
+    # Example format:
+    # {{
+    #     "template_id": "123456",
+    #     "text0": "top text",
+    #     "text1": "bottom text"
+    # }}
+    # """
     
     last_error = None
     for attempt in range(max_attempts):
         try:
             # Generate completion
             response = model.generate_content(
-                json_prompt,
+                prompt,
                 generation_config=genai.GenerationConfig(**config)
             )
             
@@ -86,25 +112,17 @@ def generate_meme_completion(
                 continue
             
             # Clean the response text
-            cleaned_response = (response.text
-                              .strip()  # Remove leading/trailing whitespace
-                              .replace('\n', '')  # Remove newlines
-                              .replace('```json', '')  # Remove markdown code blocks
-                              .replace('```', '')
-                              .strip())  # Remove any remaining whitespace
-            
-            # If response starts with triple quotes, find the JSON within
-            if cleaned_response.startswith('"""') or cleaned_response.startswith("'''"):
-                cleaned_response = cleaned_response[3:-3]
+            cleaned_response = clean_response(response.text)
             
             # Parse JSON response
             meme_data = json.loads(cleaned_response)
             
-            # Validate required keys
-            required_keys = ['template_id', 'text0', 'text1']
-            if not all(key in meme_data for key in required_keys):
-                missing_keys = [key for key in required_keys if key not in meme_data]
-                raise ValueError(f"Missing required keys: {missing_keys}")
+            # # debug - this is the source of the drake error, methinks
+            # # Validate required keys
+            # required_keys = ['template_id', 'text0', 'text1']
+            # if not all(key in meme_data for key in required_keys):
+            #     missing_keys = [key for key in required_keys if key not in meme_data]
+            #     raise ValueError(f"Missing required keys: {missing_keys}")
             
             return meme_data
             
