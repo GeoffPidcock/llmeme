@@ -20,8 +20,8 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 ## Journal
 
 ### Initial Scope
-- [ ] Prototype prompts using a variety of LLMs and an open dataset of memes - WIP
-- [ ] Deploy a streamlit demo using a cloud service called maven
+- [/] Prototype prompts using a variety of LLMs and an open dataset of memes - WIP
+- [/] Deploy a gradio demo using a cloud service called modal
 - [ ] Evaluate the performance of the prompts using a test database, human annotation, stretch LLM as a judge
 - [ ] Create tests for the prompts (using pytest)
 - [ ] Incorporate CI/CD using github actions
@@ -32,3 +32,12 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 All that got too complicated and in the way of user feedback - so simplified to the following simple call and app in GradIO:
 
 ![initial-flow](./assets/llmeme-concept.png)
+
+### Second Sprint
+Some evals should have been done prior to pushing it live - so this was the focus, and identified:
+- poor JSON formatting
+- problems with the JSON validation limiting the meme search space (to only those with two text boxes - e.g. Drake)
+
+Pushed an improved version to modal - though some prompts like `Toddler is not impresssed with his dad's cooking` still fail.
+
+User now sees an error message when the prompt fails.
