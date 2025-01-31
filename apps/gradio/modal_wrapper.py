@@ -11,7 +11,7 @@ image = modal.Image.debian_slim().pip_install(
     "psycopg2-binary",  # PostgreSQL
     "python-dotenv",  # Environment variables
     "requests"  # For imgflip API
-).add_local_file("system_prompt.txt", "/root/system_prompt.txt").add_local_file("memes20250128.json", "/root/memes20250128.json")  # Include required files
+).add_local_file("system_prompt.txt", "/root/system_prompt.txt").add_local_file("memes20250128.pkl", "/root/memes20250128.pkl")  # Include required files
 
 # Define the Modal app
 app = modal.App("LLMeme", image=image)

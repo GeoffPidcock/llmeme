@@ -1,11 +1,12 @@
 import gradio as gr
 import google.generativeai as genai
-import json
+import pickle
 import os
 from uuid import uuid4
 from utils import construct_meme_prompt, generate_meme_completion, create_imgflip_meme, log_event
 from datetime import datetime
 from dotenv import load_dotenv
+import copy
 
 # Load environment variables from both .env and shell
 load_dotenv()  # This adds .env variables to os.environ
@@ -51,8 +52,8 @@ os.environ.update(os.environ)  # Ensure shell variables are included
 with open('system_prompt.txt', 'r') as f:
     system_prompt = f.read()
 
-with open('memes20250128.json', 'r') as f:
-    meme_context = json.load(f)
+with open('memes20250128.pkl', 'rb') as f:
+    meme_context = pickle.load(f)
 
 # Configure Gemini
 genai.configure(api_key=os.getenv('GEMINI_API_KEY'))
@@ -74,12 +75,29 @@ def generate_meme(prompt: str, state: dict = None) -> tuple:
             state["previous_attempts"]
         )
         
-        meme_data = generate_meme_completion(
-            prompt=full_prompt,
-            model=model,
-            max_attempts=10
-        )
+        try:
+            meme_data = generate_meme_completion(
+                prompt=full_prompt,
+                model=model,
+                max_attempts=20
+            )
+        except ValueError as e:
+            return (
+                None,
+                gr.update(visible=False),
+                state,
+                gr.update(visible=True, value="The AI had trouble understanding how to make this meme. Try rephrasing your prompt or being more specific.")
+            )
+        except Exception as e:
+            return (
+                None,
+                gr.update(visible=False),
+                state,
+                gr.update(visible=True, value=f"An error occurred while generating the meme: {str(e)}")
+            )
         
+        meme_data_log = copy.deepcopy(meme_data)
+
         # Add imgflip credentials
         meme_data.update({
             'username': os.getenv('IMGFLIP_USERNAME'),
@@ -99,7 +117,9 @@ def generate_meme(prompt: str, state: dict = None) -> tuple:
                 session_id=state["session_id"],
                 event_type="meme_created",
                 data={
-                    "prompt": prompt,
+                    "input": prompt,
+                    "prompt": full_prompt,
+                    "output": meme_data_log,
                     "image_url": imgflip_response['image_url'],
                     "template_id": meme_data['template_id']
                 },
@@ -111,7 +131,8 @@ def generate_meme(prompt: str, state: dict = None) -> tuple:
             return (
                 imgflip_response['image_url'],  # Display image
                 gr.update(visible=True),        # Show buttons
-                state                           # Update state
+                state,                          # Update state
+                gr.update(visible=False)        # Hide error text on success
             )
             
         else:
@@ -131,7 +152,8 @@ def generate_meme(prompt: str, state: dict = None) -> tuple:
         return (
             None,                      # No image
             gr.update(visible=False),  # Hide buttons
-            state                      # Keep state
+            state,                     # Keep state
+            gr.update(visible=True, value=str(e))  # Show error message
         )
 
 def like_meme(state: dict) -> None:
@@ -182,18 +204,24 @@ with gr.Blocks() as app:
         interactive=False,
         visible=False
     )
+
+    error_text = gr.Textbox(  # Add this new component
+        label="Error Message",
+        interactive=False,
+        visible=False
+    )    
     
     # Event handlers
     submit_btn.click(
         fn=generate_meme,
         inputs=[prompt, state],
-        outputs=[image_output, button_row, state]
+        outputs=[image_output, button_row, state, error_text]
     )
     
     retry_btn.click(
         fn=generate_meme,
         inputs=[prompt, state],
-        outputs=[image_output, button_row, state]
+        outputs=[image_output, button_row, state, error_text]
     )
     
     like_btn.click(
