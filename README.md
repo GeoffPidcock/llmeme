@@ -20,8 +20,8 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 ## Journal
 
 ### Initial Scope
-- [/] Prototype prompts using a variety of LLMs and an open dataset of memes - WIP
-- [/] Deploy a gradio demo using a cloud service called modal
+- [X] Prototype prompts using a variety of LLMs and an open dataset of memes - WIP
+- [X] Deploy a gradio demo using a cloud service called modal
 - [ ] Evaluate the performance of the prompts using a test database, human annotation, stretch LLM as a judge
 - [ ] Create tests for the prompts (using pytest)
 - [ ] Incorporate CI/CD using github actions
@@ -41,3 +41,14 @@ Some evals should have been done prior to pushing it live - so this was the focu
 Pushed an improved version to modal - though some prompts like `Toddler is not impresssed with his dad's cooking` still fail.
 
 User now sees an error message when the prompt fails.
+
+### Third Sprint
+The focus of this sprint was
+- Evaluation and tests
+    - Identified a need for imroved logs (including test vs prod traffic)
+    - Tested for base template coverage (some templates are picked more often than others)
+    - Annotating hallucination, incomplete, relevant, surprising, clever, like it, for a baseline 
+        - need to make it easier on the annotater
+        - baseline 11/28 memes "liked"
+
+It would be great to try this again with a different LLM - i.e. gemini 2 or grok 3
