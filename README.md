@@ -52,3 +52,9 @@ The focus of this sprint was
         - baseline 11/28 memes "liked"
 
 It would be great to try this again with a different LLM - i.e. gemini 2 or grok 3
+
+### Fifth Sprint
+Three foci for this sprint:
+- Improve the context, from 10 to 30 memes - `memes20250304.json`
+- Create an manual evaluation harness that writes to a sqllite db - `manual_eval.ipynb`
+- Improve the logs - start capturing token count, response times
