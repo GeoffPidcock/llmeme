@@ -513,8 +513,176 @@
       "text1": "If you don't have a job"
     },
     "researcher_comments": ""
-}
-  
-  
+},
 
+{
+  "id": "119139145",
+  "kym_definition": "The Nut Button is a reaction image featuring a stock photo of a hand pressing a blue button with the word \"NUT\" digitally added on top. The image is often used as a punchline in a series of images, typically to indicate a strong desire or reaction to something.",
+  "kym_examples": [
+    {
+      "text0": "When you see your crush",
+      "text1": "NUT",
+      "description": "text0 is the top text, text1 is on the button"
+    },
+    {
+      "text0": "When the pizza arrives",
+      "text1": "NUT",
+      "description": "text0 is the top text, text1 is on the button"
+    }
+  ],
+  "imgflip_api_post": {
+    "template_id": "119139145",
+    "text0": "When you see your crush",
+    "text1": "NUT"
+  },
+  "researcher_comments": ""
+},
+
+{
+  "id": "61520",
+  "kym_definition": "Futurama Fry, also known as Not Sure If, is a series of reaction images featuring the character Fry from the animated television series Futurama. The images are typically captioned with the phrasal template \"Not sure if X or just Y,\" where \"X\" and \"Y\" are two possible explanations for a given situation.",
+  "kym_examples": [
+    {
+      "text0": "Not sure if actually funny",
+      "text1": "Or laughing because everyone else is",
+      "description": "text0 is the top text, text1 is the bottom text"
+    },
+    {
+      "text0": "Not sure if bad memory",
+      "text1": "Or didn't pay attention",
+      "description": "text0 is the top text, text1 is the bottom text"
+    }
+  ],
+  "imgflip_api_post": {
+    "template_id": "61520",
+    "text0": "Not sure if actually funny",
+    "text1": "Or laughing because everyone else is"
+  },
+  "researcher_comments": ""
+},
+
+{
+  "id": "222403160",
+  "kym_definition": "I Am Once Again Asking for Your Financial Support is a quote uttered by the United States politician Bernie Sanders in his December 2019 fundraising video. Starting in mid-January 2020, the quote gained popularity as an image macro on Reddit and Facebook, with memes imagining various scenarios in which monetary donations are being" ,
+  "kym_examples": [
+    {
+      "text0": "When you have to ask your boss for a raise",
+      "text1": "for Your Financial Support",
+      "description": "text0 is top, text1 is bottom, with text starting after I am once again asking"
+    },
+    {
+      "text0": "When you have to ask your friend for a favor",
+      "text1": "for Your Financial Support",
+      "description": "text0 is top, text1 is bottom"
+    }
+  ],
+  "imgflip_api_post": {
+    "template_id": "222403160",
+    "text0": "When you have to ask your boss for a raise",
+    "text1": "for Your Financial Support"
+  },
+  "researcher_comments": ""
+},
+
+
+{
+  "id": "178591752",
+  "kym_definition": "Tuxedo Winnie the Pooh, also known as 'A Fellow Man of Culture,' refers to a photoshopped image of character Winnie the Pooh sitting in an armchair. Initially circulated as a reaction image on 4chan, in March 2019 the image gained mainstream popularity on Reddit.",
+
+  "kym_examples": [
+    {
+      "text0": "When you see your classmate writing 'penis' on the chair in front of him",
+      "text1": "A fellow man of culture",
+      "description": "text0 is top, text1 is bottom"
+    },
+    {
+      "text0": "Drink water from a cup",
+      "text1": "Consume H2O from crystal goblet",
+      "description": "text0 is top, text1 is bottom"
+    }
+  ],
+
+  "imgflip_api_post": {
+    "template_id": "178591752",
+    "text0": "When you see your classmate writing 'penis' on the chair in front of him",
+    "text1": "A fellow man of culture"
+  },
+  "researcher_comments": ""
+},
+
+{
+  "id": "155067746",
+  "kym_definition": "Surprised Pikachu, also known as Shocked Pikachu, refers to a screenshot from the Pokémon anime of the character Pikachu with its mouth agape, as though it were surprised at something. In the autumn of 2018, the image was used as a reaction image paired with captions where a set-up leads to a predictable outcome that nevertheless leaves one surprised.",
+
+  "kym_examples": [
+    {
+      "text0": "Anime villain: Here's my plan, now that I've told you, there's no way you can defeat me!",
+      "text1": "Protagonist: Uses the information to defeat the villain",
+      "text2": "Anime villain:",
+      "description": "text0 is the setup, text1 is the outcome, text2 is the reaction - often referring to the face that follows"
+    },
+    {
+      "text0": "User: Posts something",
+      "text1": "Other users: Upvote the post",
+      "text2": "User:",
+      "description": "text0 is the action, text1 is the response, text2 is the reaction - often referring to the face that follows"
+    }
+  ],
+
+  "imgflip_api_post": {
+    "template_id": "155067746",
+    "boxes[0][text]": "Anime villain: Here's my plan, now that I've told you, there's no way you can defeat me!",
+    "boxes[1][text]": "Protagonist: Uses the information to defeat the villain",
+    "boxes[2][text]": "Anime villain:"
+  },
+  "researcher_comments": ""
+},
+
+{
+  "id": "114585149",
+  "kym_definition": "Inhaling Seagull is a four-panel exploitable image macro series featuring a stock photo of a seagull, with the final panel showing the bird with its head tilted upwards and its mouth wide open, as if it is inhaling. The format is typically used to represent someone holding back a reaction before eventually letting loose in a dramatic fashion.",
+  "kym_examples": [
+    {
+      "text0": "When you see a spider in your room",
+      "text1": "But then it crawls under your bed",
+      "text2": "Screams in terror",
+      "description": "text0 is the initial panel, text1 is the second panel, and text2 is the final panel where the seagull is screaming"
+    },
+    {
+      "text0": "Trying to stay calm during a presentation",
+      "text1": "But you forget your lines",
+      "text2": "Panic mode activated",
+      "description": "text0 is the initial panel, text1 is the second panel, and text2 is the final panel where the seagull is panicking"
+    }
+  ],
+  "imgflip_api_post": {
+    "template_id": "114585149",
+    "boxes[0][text]": "When you see a spider in your room",
+    "boxes[1][text]": "But then it crawls under your bed",
+    "boxes[2][text]": "Screams in terror"
+  },
+  "researcher_comments": ""
+},
+
+{
+  "id": "27813981",
+  "kym_definition": "Hide The Pain Harold, also simply referred to as 'Harold' or 'Maurice' is the nickname given to a senior stock photography model whose facial expression appears to indicate suppressed pain and/or discomfort.",
+  "kym_examples": [
+    {
+        "text0": "When they open Powerpoint and you see slide '1 out of 243'",
+        "text1": "",
+        "description": "text0 is the top text setting up the situation. text1 intentially left blank as this features the image where the man is in pain"
+    },
+    {
+        "text0": "Me who now has to attend online classes",
+        "text1": "My FBI agent who now has to attend online classes with me",
+        "description": "text0 is the top text, text1 is the bottom text"
+    }
+  ],
+  "imgflip_api_post": {
+    "template_id": "27813981",
+    "text0": "When they open Powerpoint and you see slide '1 out of 243'",
+    "text1": ""
+  }
+}
 ]
