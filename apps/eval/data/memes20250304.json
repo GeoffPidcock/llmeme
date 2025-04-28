@@ -1,0 +1,688 @@
+[
+{	
+  "id": "181913649",
+  "name": "Drake Hotline Bling",
+  "kym_definition": "Hotline Bling is a 2015 R&B single by the Canadian hip hop artist Drake. Following the release of the song's music video, which features the artist dancing in a color-shifting cube-like structure, it became popular among fans, spawning parodies, remixes, and reaction images often referred to as Drakeposting.",  
+  "kym_examples": [    
+    {      
+      "text0": "Pikachu",
+      "text1": "Eevee",
+      "description": "text0 is in the top panel with Drake dismissing, and text1 is in the bottom panel with Drake approving."
+    },
+    {
+      "text0": "You used to c-c-c-call me on my selfoam",
+      "text1": "",
+      "description": "text0 is the only text present in the image, placed at the top."
+    }
+  ],
+  "imgflip_api_post": {
+    "template_id": "181913649",
+    "text0": "Pikachu",
+    "text1": "Eevee"
+  },
+  "researcher_comments": ""
+},
+
+{
+    "id": "112126428",
+    "name": "Distracted Boyfriend",    
+    "kym_definition": "Distracted Boyfriend, also known as Man Looking at Other Woman, refers to a series of object-labeled stock photos of a man looking at a woman while walking with a different woman. The images have been used as an exploitable in image macros to illustrate various forms of disloyalty.",
+    "kym_examples": [
+      {
+        "text0": "menial side tasks given by random citizens of",
+        "text1": "link",
+        "text2": "zelda, waiting to be rescued",
+        "description": "text0 is the other woman, text1 is the man, text2 is the romantic partner"
+      },
+      {
+        "text0": "Socialism",
+        "text1": "The Youth",
+        "text2": "Capitalism",
+        "description": "text0 is the other woman, text1 is the man, text2 is the romantic partner"
+      }
+    ],
+    "imgflip_api_post": {
+      "template_id": "112126428",
+      "boxes[0][text]": "menial side tasks given by random citizens",
+      "boxes[1][text]": "link",
+      "boxes[2][text]": "zelda, waiting to be rescued"
+    },
+    "researcher_comments": ""
+},
+
+{
+    "id": "87743020",
+    "name": "Two Buttons",    
+    "kym_definition": "Two Buttons refers to a series of exploitable comic strips featuring a character from the animated TV series Arthur sweating as he tries to decide between two red buttons labeled with contradicting statements. The images have been used to depict difficult choices or dilemmas.",
+    "kym_examples": [
+      {
+        "text0": "BE A DICK",
+        "text1": "DON'T BE A DICK",
+        "description": "text0 is on the left button, text1 is on the right button"
+      },
+      {
+        "text0": "Engineer products people want to buy",
+        "text1": "Engineer people to buy your products",
+        "text2": "Product Manager",
+        "description": "text0 is on the left button, text1 is on the right button, text2 is the character choosing"
+      }
+    ],
+    "imgflip_api_post": {
+      "template_id": "87743020",
+      "boxes[0][text]": "Engineer products people want to buy",
+      "boxes[1][text]": "Engineer people to buy your products",
+      "boxes[2][text]": "Product Manager"
+    },
+    "researcher_comments": ""
+},
+
+{
+    "id": "124822590",
+    "name": "Left Exit 12 Off Ramp",    
+    "kym_definition": "Left Exit 12 Off Ramp is a series of exploitable images in which a car swerving into an off ramp. On the highway sign, the meme’s author photoshops something the author disapproves of and something they would prefer. The car swerves toward the preference.",
+    "kym_examples": [
+      {
+        "text0": "Using Tide Pods to Clean Laundry",
+        "text1": "Using Tide Pods As Fine Cuisine",
+        "text2": "The Youth",
+        "description": "text0 is on the straight path, text1 is on the exit ramp, text2 is the car"
+      },
+      {
+        "text0": "A new year filled with opportunities to better myself and make a difference",
+        "text1": "Another year shitposting memes on Reddit",
+        "text2": "Me",
+        "description": "text0 is on the straight path, text1 is on the exit, text2 is the car"
+      }
+    ],
+    "imgflip_api_post": {
+      "template_id": "124822590",
+      "boxes[0][text]": "A new year filled with opportunities to better myself and make a difference", 
+      "boxes[1][text]": "Another year shitposting memes on Reddit", 
+      "boxes[2][text]": "Me" 
+    },
+    "researcher_comments": ""
+},
+
+{
+    "id": "129242436",
+    "name": "Change My Mind",    
+    "kym_definition": "Steven Crowder's 'Change My Mind' Campus Sign is a photograph of American Canadian conservative podcaster Steven Crowder seated behind a sign that reads 'Male privilege is a myth / Change My Mind' outside of Texas Christian University. Since its upload to Crowder's Twitter account in February 2018, the photograph has been turned into an exploitable template for online parodies.",
+    "kym_examples": [
+      {
+        "text0": "Real men wear pink",
+        "description": "text0 is the top line. The bottom line will be unchanged and reads change my mind"
+      },
+      {
+        "text0": "HEROBRINE IS A MYTH",
+        "description": "text0 is on the sign, text1 is on the banner below"
+      }
+    ],
+    "imgflip_api_post": {
+      "template_id": "129242436",
+      "text0": "Real men wear pink"
+    },
+    "researcher_comments": ""
+},
+  
+{
+    "id": "438680",
+    "name": "Batman Slapping Robin",    
+    "kym_definition": "Batman Slapping Robin, also known as 'My Parents Are Dead,' is an exploitable image macro series featuring the DC Comics superhero Batman slapping his protégé Robin in mid-conversation. Taken from a comic book published in 1965, the single-panel illustration has inspired a series of parodies featuring custom-captioned speech bubbles on 4chan, Reddit and elsewhere.",
+    "kym_examples": [
+      {
+        "text0": "Ow! Batman, your grief has obsessed you with this idea of vengeance. I beg you...give it up!",
+        "text1": "Don't tell me I'm wrong, you brat. Proving Superman's guilt is my whole mission in life!",
+        "description": "text0 is Robin's dialogue, text1 is Batman's dialogue."
+      },
+      {
+        "text0": "Hey Batman, what are your parents getting you for Christ-",
+        "text1": "My parents are deaaaaaaad!!!",
+        "description": "text0 is Robin's question, text1 is Batman's response."
+      }
+    ],
+    "imgflip_api_post": {
+      "template_id": "438680",
+      "text0": "Hey Batman, what are your parents getting you for Christ-",
+      "text1": "My parents are deaaaaaaad!!!"
+    },
+    "researcher_comments": ""
+},
+
+{
+    "id": "217743513",
+    "name": "Draw 25",    
+    "kym_definition": "Draw 25 refers to a two-paneled image macro with one image of a customizable wild card next to an image of a man with a large hand of cards. The wild card includes the option of performing an action or 'draw 25' and the second image infers that the person decided against performing the action. The image macro rose to popularity on Twitter, Reddit and Instagram in January 2020.",
+    "kym_examples": [
+      {
+        "text0": "Date Me",
+        "text1": "My Crush",
+        "description": "text0 is the alternate choice to drawing 25, text1 is the person who decided to draw 25."
+      },
+      {
+        "text0": "Acknowledge that your child made a valid point against you",
+        "text1": "Parents",
+        "description": "text0 is the alternate choice to drawing 25, text1 is the person who decided to draw 25."
+      }
+    ],
+    "imgflip_api_post": {
+      "template_id": "217743513",
+      "text0": "Date Me",
+      "text1": "My Crush"
+    },
+    "researcher_comments": ""
+},
+
+{
+    "id": "131087935",
+    "name": "Running Away Balloon",    
+    "kym_definition": "Running Away Balloon is a two-panel exploitable webcomic featuring a grey character attempting to reach a yellow balloon but is being held back by a pink character. The meme has been used to express frustrations with the subject's limitations.",
+    "kym_examples": [
+      {
+            "text0": "Me",
+            "text1": "Good Meme",
+            "text2": "AI",
+            "text3": "Me",
+            "text4": "Good Meme",
+            "description": "text0 is the top panel person, text1 is the top panel opportunity, text2 is the bottom panel thing holding person back, text3 is the bottom panel person, text4 is the bottom panel opportunity"
+      },
+      {
+        "text0": "Me",
+        "text1": "Current Project",
+        "text2": "Other Project Ideas",
+        "text3": "Me",
+        "text4": "Current Project",
+        "description": "text0 is top panel person, text1 is top panel opportunity, text2 is bottom panel thing holding person back, text3 is bottom panel person, text4 is bottom panel opportunity"
+      }
+    ],
+    "imgflip_api_post": {
+        "template_id": "131087935",
+        "boxes[0][text]": "Me",
+        "boxes[1][text]": "Good Meme",
+        "boxes[2][text]": "AI",
+        "boxes[3][text]": "Me",
+        "boxes[5][text]": "Good Meme"
+      },
+    "researcher_comments": "We can get away with only providing 3 text boxes - the user can work it out from there"
+},
+
+{
+    "id": "61579",
+    "name": "One Does Not Simply",    
+    "kym_definition": "One Does Not Simply Walk Into Mordor (snowclone: One Does Not Simply X into Mordor) is a memorable quote from the 2001 fantasy epic film Lord of the Rings: The Fellowship of the Ring. Variants of the phrase are often used in image macros featuring Mordor, a fictional location from The Lord of the Rings franchise, or the character Boromir, who originally says the line in the film.",
+    "kym_examples": [
+      {
+        "text0": "One does not simply",
+        "text1": "walk into Mordor",
+        "description": "text0 is the top text, text1 is the bottom text"
+      },
+      {
+        "text0": "One does not simply",
+        "text1": "complete this task without proper guidance",
+        "description": "text0 is the top text, text1 is the bottom text"
+      }
+    ],
+    "imgflip_api_post": {
+      "template_id": "61579",
+      "text0": "One does not simply",
+      "text1": "walk into Mordor"
+    },
+    "researcher_comments": ""
+},
+
+{
+    "id": "93895088",
+    "name": "Expanding Brain",    
+    "kym_definition": "Galaxy Brain, also known as Expanding Brain, is a multi-panel exploitable image series comparing the brain size of a person relative to other variables. Though the expanding brain is usually implied to showcase intellectual superiority over various objects, it is more Galaxy Brain, also known as Expanding Brain, is a multi-panel exploitable image series comparing the brain size of a person relative to other variables. Though the expanding brain is usually implied to showcase intellectual superiority over various objects, it is more often used in an ironic sense to imply the opposite",
+    "kym_examples": [
+      {
+        "text0": "Harry Potter Political Comparisons",
+        "text1": "Star Wars Political Comparisons",
+        "text2": "Transformers Political Comparisons",
+        "description": "text0 is the first step, text1 is the second step, text2 is the third step"
+      },
+      {
+        "text0": "Deny oppressing people",
+        "text1": "Apologise for oppressing people",
+        "text2": "Write songs about oppressing people",
+        "text3": "Become poorer than the people you oppressed so nobody cares",
+        "description": "text0 is the first step, text1 is the second step, text2 is the third step, text3 is the final step"
+      }
+    ],
+  
+    "imgflip_api_post": {
+      "template_id": "93895088",
+      "boxes[0][text]": "Deny oppressing people",
+      "boxes[1][text]": "Apologise for oppressing people",
+      "boxes[2][text]": "Write songs about oppressing people",
+      "boxes[3][text]": "Become poorer than the people you oppressed so nobody cares"
+    },
+  
+    "researcher_comments": "Needs 4 textbooks to be filled out"
+},
+
+{
+    "id": "4087833",
+    "name": "Waiting Skeleton",    
+    "kym_definition": "Waiting for OP is a series of image macros featuring people, animals, or skeletons posed in front of computer screens as they appear to have been waiting for the original poster's response for a very long time.",
+    "kym_examples": [
+      {
+        "text0": "OP WILL SURELY DELIVER, ",
+        "text1": "LET'S JUST WAIT",
+        "description": "text0 is the text displayed above the skeleton sitting on a bench, text1 is the text displayed below."
+      },
+      {
+        "text0": "Haunted Chocalatier will come out soon",
+        "text1": "Let's just wait",        
+        "description": "text0 is the text displayed above the skeleton sitting on a bench, text1 is the text displayed below."
+      }
+    ],
+    "imgflip_api_post": {
+      "template_id": "4087833",
+      "text0": "OP WILL DELIVER",
+      "text1": "LET'S JUST WAIT"
+    },
+    "researcher_comments": "May need more #examples"
+},
+
+{
+    "id": "102156234",
+    "name": "Mocking SpongeBob",
+    "kym_definition": "Mocking SpongeBob is an image macro series featuring a picture of cartoon character SpongeBob SquarePants in which people use the image to indicate a mocking tone towards an opinion or point of view.",
+    "kym_examples": [
+      {
+        "text1": "How i stare back at little kids when they stare for too long.",
+        "description": "text1 is the caption below the 'Mocking SpongeBob' image."
+      },
+      {
+        "text0": "Bf: 'I don't even know her like that.'",
+        "text1": "Me: 'I dOn'T EveN KnOw heR lIkE thAT.'",
+        "description": "text0 is the setup text, text1 is the response text in a mocking tone."
+      }
+    ],
+    "imgflip_api_post": {
+      "template_id": "102156234",
+      "text0": "Bf: 'I don't even know her like that.'",
+      "text1": "Me: 'I dOn'T EveN KnOw heR lIkE thAT.'"
+    },
+    "researcher_comments": "Service caps text, no need to mix case. May need more #examples"
+},
+
+{
+    "id": "1035805",
+    "name": "Boardroom Meeting Suggestion",
+  
+    "kym_definition": "Boardroom Meeting Suggestion refers to a series of exploitable webcomics in which three employees in a boardroom suggest ideas that are subsequently shot down by their boss. The boss then throws the employee who made the final suggestion through a window. The comics are typically used to depict a group of people with a different opinion from the majority.",
+    "kym_examples": [
+      {
+        "text0": "I wanna congratulate everyone! Playstation All-Stars couldn't be any better.",
+        "text1": "Agreed!",
+        "text2": "Me too!",
+        "text3": "It... could've been better.",
+        "description": "text0 is the executive's statement, text1 and text2 are the staff's agreements, text3 is the suggestion."
+      },
+      {
+        "text0": "We need to pick pizza toppings",
+        "text1": "Pepperoni",
+        "text2": "Mushroom",
+        "text3": "Pineapple",
+        "description": "text0 is the executive's statement, text1 and text2 are the staff's normal suggestions, text3 is the staffer's unusual suggestion."
+      }      
+    ],
+  
+    "imgflip_api_post": {
+      "template_id": "1035805",
+      "boxes[0][text]": "I wanna congratulate everyone! Playstation All-Stars couldn't be any better.",
+      "boxes[1][text]": "Agreed!",
+      "boxes[2][text]": "Me too!",
+      "boxes[3][text]": "It... could've been better."
+    },
+
+    "researcher_comments": ""
+},
+
+{
+    "id": "97984",
+    "name": "Disaster Girl",
+    "kym_definition": "Disaster Girl is a photoshop meme in which an exploitable photo of a smiling girl is superimposed onto images of natural disasters and accidents to imply that she has caused some type of calamity depicted in the background.",
+    "kym_examples": [
+      {
+          "text0": "FLU SEASON",
+          "text1": "RFK JR.",
+          "description": "text0 is the burning house, text1 is the girl. This is political as RFK JR is an anti vaxer"
+  
+      },
+      {
+        "text0": "There was a spider",
+        "text1": "Its gone now",
+        "description": "text0 is above the burning house, text1 is below the girl"
+      }      
+    ],
+  
+  "imgflip_api_post": {
+      "template_id": "97984",
+      "text0": "There was a spider",
+      "text1": "Its gone now"
+  },
+  "researcher_comments": ""
+},
+
+{
+    "id": "188390779",
+    "kym_definition": "Woman Yelling at a Cat is a meme that features a screenshot of The Real Housewives of Beverly Hills cast member Taylor Armstrong crying and pointing at a woman across the dinner table, paired with a picture of a cat sitting at a dinner table. The image of the cat, named Smudge, sitting behind a plate of vegetables, was taken from a Tumblr post. The format is typically used to express a humorous or sarcastic juxtaposition between an angry person and an indifferent or unbothered response from the cat.",
+    "kym_examples": [
+      {
+          "text0": "Me accusing my cat of cuddling with other people when I come home drunk after bottomless brunch",
+          "text1": "",
+          "description": "text0 is the caption, text1 is empty"
+      },
+      {
+          "text0": "Girls when they see a spider",
+          "text1": "The spider",
+          "description": "text0 is the girl's reaction, text1 is the spider's response"
+      }
+  ],
+  "imgflip_api_post": {
+    "template_id": "188390779",
+    "text0": "Girls when they see a spider",
+    "text1": "The spider"
+  },
+  "researcher_comments": ""
+},
+
+{
+    "id": "91538330",
+    "name": "X, X Everywhere",
+    "kym_definition": "X, X Everywhere is a series of object-labeling image macros featuring a screen-capture from the 1995 computer-animated film Toy Story in which the character Buzz Lightyear says the phrase \"X, X Everywhere\" while gesturing with his arm. The format is typically used to express that a certain characteristic, object, or person is ubiquitous.",
+    "kym_examples": [
+      {
+        "text0": "Online Classes",
+        "text1": "Zoom",
+        "description": "text0 is the object being pointed at, text1 is the object doing the pointing"
+      },
+      {
+        "text0": "Ads",
+        "text1": "YouTube",
+        "description": "text0 is the object being pointed at, text1 is the object doing the pointing"
+      }
+    ],
+    "imgflip_api_post": {
+      "template_id": "91538330",
+      "text0": "Online Classes",
+      "text1": "Zoom"
+    },
+    "researcher_comments": ""
+},
+  
+{
+    "id": "101470",
+    "name": "Ancient Aliens",
+    "kym_definition": "Ancient Aliens is a popular meme series based on a still frame of Giorgio A. Tsoukalos from the History Channel's show Ancient Aliens. The meme typically features Tsoukalos with his hands raised, accompanied by captions that attribute various historical events and phenomena to aliens.",
+    "kym_examples": [
+      {
+        "text0": "When you can't find any logical explanation",
+        "text1": "Aliens",
+        "description": "text0 is the setup, text1 is the punchline"
+      },
+      {
+        "text0": "Why did the chicken cross the road?",
+        "text1": "Aliens",
+        "description": "text0 is the setup, text1 is the punchline"
+      }
+    ],
+    "imgflip_api_post": {
+      "template_id": "101470",
+      "text0": "When you can't find any logical explanation",
+      "text1": "Aliens"
+    },
+    "researcher_comments": ""
+},
+
+{
+    "id": "247375501",
+    "name": "Buff Doge vs. Cheems",
+    "kym_definition": "Swole Doge vs. Cheems is a meme format depicting two versions of the Doge character: one muscular and confident (Swole Doge) and the other small and timid (Cheems). The meme is used to compare two different scenarios or situations, often highlighting a contrast between strength and weakness.",
+    "kym_examples": [
+      {
+        "text0": "Math in high school",
+        "text1": "Math in college",
+        "description": "text0 is the muscular Doge, text1 is the smaller Doge"
+      },
+      {
+        "text0": "Programming in Python",
+        "text1": "Programming in Assembly",
+        "description": "text0 is the muscular Doge, text1 is the smaller Doge"
+      }
+    ],
+    "imgflip_api_post": {
+      "template_id": "247375501",
+      "text0": "Math in high school",
+      "text1": "Math in college"
+    },
+    "researcher_comments": ""
+},
+
+{
+    "id": "131940431",
+    "name": "Gru's Plan",
+    "kym_definition": "Gru's Plan is a meme format featuring four panels from the animated film Despicable Me, in which the character Gru presents a plan on a series of easel charts. The format is often used to depict a plan that backfires or has an unexpected outcome.",
+    "kym_examples": [
+      {
+        "text0": "Make a plan",
+        "text1": "Execute the plan",
+        "text2": "The plan fails",
+        "text3": "Panic",
+        "description": "text0 is the first panel, text1 is the second panel, text2 is the third panel, text3 is the fourth panel"
+      },
+      {
+        "text0": "Study for the test",
+        "text1": "Take the test",
+        "text2": "Realize you studied the wrong material",
+        "text3": "Panic",
+        "description": "text0 is the first panel, text1 is the second panel, text2 is the third panel, text3 is the fourth panel"
+      }
+    ],
+    "imgflip_api_post": {
+      "template_id": "131940431",
+      "boxes[0][text]": "Make a plan",
+      "boxes[1][text]": "Execute the plan",
+      "boxes[2][text]": "The plan fails",
+      "boxes[3][text]": "Panic"
+    },
+    "researcher_comments": ""
+},
+
+{
+    "id": "89370399",
+    "name": "Roll Safe Think About It",
+    "kym_definition": "Roll Safe is a reaction image macro series featuring a screenshot of the character Reece Simpson (played by actor Kayode Ewumi) from the web series Hood Documentary, who is shown tapping his head while smiling, as if coming up with an idea. The image is often used to imply that someone has made a clever decision or avoided a problem.",
+    "kym_examples": [
+      {
+        "text0": "Can't get fired",
+        "text1": "If you don't have a job",
+        "description": "text0 is the top text, text1 is the bottom text"
+      },
+      {
+        "text0": "Can't be late",
+        "text1": "If you never leave",
+        "description": "text0 is the top text, text1 is the bottom text"
+      }
+    ],
+    "imgflip_api_post": {
+      "template_id": "89370399",
+      "text0": "Can't get fired",
+      "text1": "If you don't have a job"
+    },
+    "researcher_comments": ""
+},
+
+{
+  "id": "119139145",
+  "kym_definition": "The Nut Button is a reaction image featuring a stock photo of a hand pressing a blue button with the word \"NUT\" digitally added on top. The image is often used as a punchline in a series of images, typically to indicate a strong desire or reaction to something.",
+  "kym_examples": [
+    {
+      "text0": "When you see your crush",
+      "text1": "NUT",
+      "description": "text0 is the top text, text1 is on the button"
+    },
+    {
+      "text0": "When the pizza arrives",
+      "text1": "NUT",
+      "description": "text0 is the top text, text1 is on the button"
+    }
+  ],
+  "imgflip_api_post": {
+    "template_id": "119139145",
+    "text0": "When you see your crush",
+    "text1": "NUT"
+  },
+  "researcher_comments": ""
+},
+
+{
+  "id": "61520",
+  "kym_definition": "Futurama Fry, also known as Not Sure If, is a series of reaction images featuring the character Fry from the animated television series Futurama. The images are typically captioned with the phrasal template \"Not sure if X or just Y,\" where \"X\" and \"Y\" are two possible explanations for a given situation.",
+  "kym_examples": [
+    {
+      "text0": "Not sure if actually funny",
+      "text1": "Or laughing because everyone else is",
+      "description": "text0 is the top text, text1 is the bottom text"
+    },
+    {
+      "text0": "Not sure if bad memory",
+      "text1": "Or didn't pay attention",
+      "description": "text0 is the top text, text1 is the bottom text"
+    }
+  ],
+  "imgflip_api_post": {
+    "template_id": "61520",
+    "text0": "Not sure if actually funny",
+    "text1": "Or laughing because everyone else is"
+  },
+  "researcher_comments": ""
+},
+
+{
+  "id": "222403160",
+  "kym_definition": "I Am Once Again Asking for Your Financial Support is a quote uttered by the United States politician Bernie Sanders in his December 2019 fundraising video. Starting in mid-January 2020, the quote gained popularity as an image macro on Reddit and Facebook, with memes imagining various scenarios in which monetary donations are being" ,
+  "kym_examples": [
+    {
+      "text0": "When you have to ask your boss for a raise",
+      "text1": "for Your Financial Support",
+      "description": "text0 is top, text1 is bottom, with text starting after I am once again asking"
+    },
+    {
+      "text0": "When you have to ask your friend for a favor",
+      "text1": "for Your Financial Support",
+      "description": "text0 is top, text1 is bottom"
+    }
+  ],
+  "imgflip_api_post": {
+    "template_id": "222403160",
+    "text0": "When you have to ask your boss for a raise",
+    "text1": "for Your Financial Support"
+  },
+  "researcher_comments": ""
+},
+
+
+{
+  "id": "178591752",
+  "kym_definition": "Tuxedo Winnie the Pooh, also known as 'A Fellow Man of Culture,' refers to a photoshopped image of character Winnie the Pooh sitting in an armchair. Initially circulated as a reaction image on 4chan, in March 2019 the image gained mainstream popularity on Reddit.",
+
+  "kym_examples": [
+    {
+      "text0": "When you see your classmate writing 'penis' on the chair in front of him",
+      "text1": "A fellow man of culture",
+      "description": "text0 is top, text1 is bottom"
+    },
+    {
+      "text0": "Drink water from a cup",
+      "text1": "Consume H2O from crystal goblet",
+      "description": "text0 is top, text1 is bottom"
+    }
+  ],
+
+  "imgflip_api_post": {
+    "template_id": "178591752",
+    "text0": "When you see your classmate writing 'penis' on the chair in front of him",
+    "text1": "A fellow man of culture"
+  },
+  "researcher_comments": ""
+},
+
+{
+  "id": "155067746",
+  "kym_definition": "Surprised Pikachu, also known as Shocked Pikachu, refers to a screenshot from the Pokémon anime of the character Pikachu with its mouth agape, as though it were surprised at something. In the autumn of 2018, the image was used as a reaction image paired with captions where a set-up leads to a predictable outcome that nevertheless leaves one surprised.",
+
+  "kym_examples": [
+    {
+      "text0": "Anime villain: Here's my plan, now that I've told you, there's no way you can defeat me!",
+      "text1": "Protagonist: Uses the information to defeat the villain",
+      "text2": "Anime villain:",
+      "description": "text0 is the setup, text1 is the outcome, text2 is the reaction - often referring to the face that follows"
+    },
+    {
+      "text0": "User: Posts something",
+      "text1": "Other users: Upvote the post",
+      "text2": "User:",
+      "description": "text0 is the action, text1 is the response, text2 is the reaction - often referring to the face that follows"
+    }
+  ],
+
+  "imgflip_api_post": {
+    "template_id": "155067746",
+    "boxes[0][text]": "Anime villain: Here's my plan, now that I've told you, there's no way you can defeat me!",
+    "boxes[1][text]": "Protagonist: Uses the information to defeat the villain",
+    "boxes[2][text]": "Anime villain:"
+  },
+  "researcher_comments": ""
+},
+
+{
+  "id": "114585149",
+  "kym_definition": "Inhaling Seagull is a four-panel exploitable image macro series featuring a stock photo of a seagull, with the final panel showing the bird with its head tilted upwards and its mouth wide open, as if it is inhaling. The format is typically used to represent someone holding back a reaction before eventually letting loose in a dramatic fashion.",
+  "kym_examples": [
+    {
+      "text0": "When you see a spider in your room",
+      "text1": "But then it crawls under your bed",
+      "text2": "Screams in terror",
+      "description": "text0 is the initial panel, text1 is the second panel, and text2 is the final panel where the seagull is screaming"
+    },
+    {
+      "text0": "Trying to stay calm during a presentation",
+      "text1": "But you forget your lines",
+      "text2": "Panic mode activated",
+      "description": "text0 is the initial panel, text1 is the second panel, and text2 is the final panel where the seagull is panicking"
+    }
+  ],
+  "imgflip_api_post": {
+    "template_id": "114585149",
+    "boxes[0][text]": "When you see a spider in your room",
+    "boxes[1][text]": "But then it crawls under your bed",
+    "boxes[2][text]": "Screams in terror"
+  },
+  "researcher_comments": ""
+},
+
+{
+  "id": "27813981",
+  "kym_definition": "Hide The Pain Harold, also simply referred to as 'Harold' or 'Maurice' is the nickname given to a senior stock photography model whose facial expression appears to indicate suppressed pain and/or discomfort.",
+  "kym_examples": [
+    {
+        "text0": "When they open Powerpoint and you see slide '1 out of 243'",
+        "text1": "",
+        "description": "text0 is the top text setting up the situation. text1 intentially left blank as this features the image where the man is in pain"
+    },
+    {
+        "text0": "Me who now has to attend online classes",
+        "text1": "My FBI agent who now has to attend online classes with me",
+        "description": "text0 is the top text, text1 is the bottom text"
+    }
+  ],
+  "imgflip_api_post": {
+    "template_id": "27813981",
+    "text0": "When they open Powerpoint and you see slide '1 out of 243'",
+    "text1": ""
+  }
+}
+]

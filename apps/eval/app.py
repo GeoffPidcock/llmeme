@@ -1,5 +1,6 @@
 import os
 import pickle
+import json
 import gradio as gr
 from dotenv import load_dotenv
 from datetime import datetime
@@ -18,15 +19,21 @@ with open('data/system_prompt.txt', 'r') as f:
     system_prompt = f.read()
 
 # Load meme context
-with open('data/memes20250128.pkl', 'rb') as f:
-    meme_context = pickle.load(f)
+# old way
+# with open('data/memes20250128.pkl', 'rb') as f:
+#     meme_context = pickle.load(f)
+
+# new way
+with open('data/memes20250304.json', 'r') as f:
+    meme_context = json.load(f)
 
 # Load test prompts
 with open('data/prompts.pkl', 'rb') as f:
     test_prompts = pickle.load(f)
 
 # Configure model - EASY TO CHANGE
-MODEL_NAME = 'gemini-1.5-flash'  # Change this line to switch models
+# MODEL_NAME = 'gemini-1.5-flash' # old setting
+MODEL_NAME = 'gemini-2.0-flash-lite'  # text only output
 
 # --- GRADIO APP ---
 # Global state

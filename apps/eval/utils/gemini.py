@@ -53,7 +53,7 @@ def construct_meme_prompt(user_input, meme_context, previous_attempts=None):
     
     sections.extend([
         f"USER INPUT: {user_input.strip()}",
-        f"AVAILABLE CONTEXT: {str(shuffled_context[:10])}"  # Limit to 10 for brevity
+        f"AVAILABLE CONTEXT: {str(shuffled_context)}"  # was limited to 10 previously
     ])
 
     return "\n\n".join(sections)

@@ -23,6 +23,7 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 - [X] Prototype prompts using a variety of LLMs and an open dataset of memes - WIP
 - [X] Deploy a gradio demo using a cloud service called modal
 - [ ] Evaluate the performance of the prompts using a test database, human annotation, stretch LLM as a judge
+- [ ] Refactor from gradio to [discord](https://modal.com/docs/examples/discord_bot)
 - [ ] Create tests for the prompts (using pytest)
 - [ ] Incorporate CI/CD using github actions
 - [ ] Experiment with semantic search and if need be vector databases
@@ -53,8 +54,16 @@ The focus of this sprint was
 
 It would be great to try this again with a different LLM - i.e. gemini 2 or grok 3
 
+### Forth Sprint
+Stuck in the weeds
+
 ### Fifth Sprint
 Three foci for this sprint:
 - Improve the context, from 10 to 30 memes - `memes20250304.json`
-- Create an manual evaluation harness that writes to a sqllite db - `manual_eval.ipynb`
-- Improve the logs - start capturing token count, response times
+- Create an manual evaluation harness that writes to a sqllite db - `apps/eval` 
+    - Lessons learned were gradio over jupyter for eval tooling, 29 prompts is too much for manual eval, being wary of evals getting in the way of shipping user value, and finally outstanding issues json formatting (though this may be an inflexible eval method - Failed after 3 attempts).
+    - Still need to think on how to test for variations
+- Tear down postgres database (will need to refactor to sqlite)
+- Evaluate the new context, and the improved gemini model
+    - More content improves relevance to input, but also increases error rate.
+    - Will need to use pydantic in the next sprint.
